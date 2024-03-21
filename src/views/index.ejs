@@ -15,9 +15,42 @@
         </div>
         <li class="nav-item"><img src="images/patineta.png" alt="patineta" width="50" height="50"></li>
       </nav>
-    <div class="container">
-    <img src="images/logo.png" alt="logo">
-    <hr class="custom">
-    <a href="http://localhost:3000/Eproducto"><button type="button" class="btn btn-outline-primary">Ver catalogo</button></a>
-    </div>
+      <center>
+        <h2>Bienvenidos a el punto LKL SKATE SHOP</h2>
+        <img src="images/logo.png" alt="logo">
+        <div class="container">
+          <hr class="custom">
+          <a href="http://localhost:3000/Ecategoria"><button type="button" class="btn btn-outline-primary">Ver categorias</button></a>
+          <hr class="custom">
+        </div>
+
+        <div class="slider">
+          <a href="https://www.instagram.com/lklsk8shop"><img class="animated-image" src="images/tenis.jpg"></a>
+          <a href="https://www.instagram.com/lklsk8shop"><img class="animated-image" src="images/niño.jpg"></a>
+          <a href="https://www.instagram.com/lklsk8shop"><img class="animated-image" src="images/skate.jpg"></a>
+          <a href="https://www.instagram.com/lklsk8shop"><img class="animated-image" src="images/skate1.jpg"></a>
+          <a href="https://www.instagram.com/lklsk8shop"><img class="animated-image" src="images/tablas.jpg"></a>
+        </div>        
+        <hr class="custom">
+      </center>
+    <style>
+      .slider {
+  display: flex;
+  justify-content: space-around;
+}
+
+.animated-image {
+  width: 250px; /* Ajusta el tamaño según tus necesidades */
+  height: 250px; /* Ajusta el tamaño según tus necesidades */
+  transition: transform 0.5s ease;
+}
+
+.animated-image:hover {
+  transform: scale(1.1); /* Cambia el tamaño de la imagen al hacer hover */
+}
+
+body { 
+  margin: 0; 
+}
+    </style>
 <%- include('footer.ejs') %>

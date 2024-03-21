@@ -19,11 +19,16 @@ app.get('/', (req, res) => {
 //routes
 const productoRoutes = require('./routes/producto');
 const categoriasRoutes = require('./routes/categoria');
+const calzadoRoutes = require('./routes/calzado');
+const lijasRoutes = require('./routes/lija');
+const llantasRoutes = require('./routes/llanta');
+const tablasRoutes = require('./routes/tabla');
+const trucksRoutes = require('./routes/trucks');
 
 //middleware
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
-    host: 'localhost',
+    host: '127.0.0.1',
     user: 'root',
     password: '2609',
     port: 3306,
@@ -34,6 +39,12 @@ app.use(express.urlencoded({extended:false}));
 //Routes
 app.use('/Eproducto', productoRoutes);
 app.use('/Ecategoria', categoriasRoutes);
+app.use('/calzado', calzadoRoutes);
+app.use('/lijas', lijasRoutes);
+app.use('/llantas', llantasRoutes);
+app.use('/tablas', tablasRoutes);
+app.use('/trucks', trucksRoutes);
+
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));
